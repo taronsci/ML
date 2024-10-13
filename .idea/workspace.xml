@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde9ef7d-0e4b-4a96-b31d-f0366fafaa45" name="Changes" comment="Linear regression code added">
-      <change afterPath="$PROJECT_DIR$/Gasprice.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Multiple_Linear_Regression.py" afterDir="false" />
+    <list default="true" id="bde9ef7d-0e4b-4a96-b31d-f0366fafaa45" name="Changes" comment="Multiple Linear regression code added">
+      <change afterPath="$PROJECT_DIR$/LogisticRegrression.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,23 +23,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2mA9iZweSehMGntnHgTcJ40xhro" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Linear_Regression.executor": "Run",
-    "Python.Multiple_Linear_Regression.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Linear_Regression.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Multiple_Linear_Regression.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -65,7 +64,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726511561592</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Multiple Linear regression code added">
+      <option name="closed" value="true" />
+      <created>1726513819300</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726513819301</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -81,6 +88,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Linear regression code added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Linear regression code added" />
+    <MESSAGE value="Multiple Linear regression code added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiple Linear regression code added" />
   </component>
 </project>
