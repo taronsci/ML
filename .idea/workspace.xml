@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde9ef7d-0e4b-4a96-b31d-f0366fafaa45" name="Changes" comment="Assignment 2 Problem 9 code">
-      <change afterPath="$PROJECT_DIR$/Q7.py" afterDir="false" />
+    <list default="true" id="bde9ef7d-0e4b-4a96-b31d-f0366fafaa45" name="Changes" comment="assignment 3 Question 7">
+      <change afterPath="$PROJECT_DIR$/MNIST_SVM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +35,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.Linear_Regression.executor": "Run",
+    "Python.MNIST_SVM.executor": "Run",
     "Python.Multiple_Linear_Regression.executor": "Run",
     "Python.Q7.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -81,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728849932299</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="assignment 3 Question 7">
+      <option name="closed" value="true" />
+      <created>1731434293604</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731434293604</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +108,7 @@
     <MESSAGE value="Linear regression code added" />
     <MESSAGE value="Multiple Linear regression code added" />
     <MESSAGE value="Assignment 2 Problem 9 code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Assignment 2 Problem 9 code" />
+    <MESSAGE value="assignment 3 Question 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="assignment 3 Question 7" />
   </component>
 </project>
