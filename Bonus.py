@@ -5,6 +5,14 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
+# for task 2
+from sklearn.datasets import load_wine
+from sklearn.cluster import KMeans
+# for task 3
+from sklearn.datasets import fetch_openml
+from kmodes.kmodes import KModes
+
+# To run code go to line 199
 
 # Generate random data
 x = np.linspace(10, 15, 200)
@@ -102,7 +110,97 @@ def run_SVM():
     plt.show()
 
 
-# 1a
+def run_kmeans():
+    """
+    Creates k-means model on the data, elbow plot, clusters with first 2 features
+    :return:
+    """
+    # Load the Wine dataset
+    wine_data = load_wine()
+    x = wine_data.data
+
+    # elbow plot
+    wcss = {}
+    for i in range(1, 11):
+        kmeans = KMeans(n_clusters=i, init='k-means++', random_state=2)
+        kmeans.fit(x)
+        wcss[i] = kmeans.inertia_
+
+    plt.plot(wcss.keys(), wcss.values(), 'gs-')
+    plt.xlabel("Values of 'k'")
+    plt.ylabel('WCSS')
+    plt.show()
+
+    # Apply K-means clustering
+    kmeans = KMeans(n_clusters=3, random_state=2)
+    kmeans.fit(x)
+
+    # Get cluster labels and centroids
+    labels = kmeans.labels_
+    centroids = kmeans.cluster_centers_
+
+    # Plot clusters (using first two features)
+    plt.scatter(x[:, 0], x[:, 1], c=labels, cmap='viridis')
+    plt.scatter(centroids[:, 0], centroids[:, 1], c='red', s=200, alpha=0.75, marker='X')
+    plt.xlabel('Feature 1')
+    plt.ylabel('Feature 2')
+    plt.title('K-means Clustering on Wine Dataset')
+    plt.show()
+
+
+# Load dataset
+adult_data = fetch_openml(name='adult', version=2)
+x1 = adult_data.data
+x1 = x1.dropna()  # Drop rows with missing values
+
+
+def determine_k(samples):
+    """
+    Creates elbow plot for k-modes using a sample(to make it faster) of the data
+    :param samples: number of samples used from the dataset
+    :return: the subset chosen from the dataset of length "samples"
+    """
+    subset = x1.sample(n=samples, random_state=2)
+
+    costs = []
+    for k in range(1, 15):  # Test k from 1 to 10 clusters
+        kmode = KModes(n_clusters=k, init='Huang', n_init=10, verbose=1)
+        kmode.fit(subset)
+        costs.append(kmode.cost_)
+
+    plt.plot(range(1, 15), costs, marker='o')
+    plt.title('Elbow Plot for K-Modes Clustering')
+    plt.xlabel('Number of Clusters (k)')
+    plt.ylabel('Cost (Inertia)')
+    plt.show()
+
+    return subset
+
+
+def run_kmodes(samples):
+    """
+    Creates k-modes model on a sample of the data
+    :param samples: number of samples used from the dataset
+    :return:
+    """
+    s = determine_k(samples)
+    # Apply K-Modes clustering
+    km = KModes(n_clusters=10, init='Huang', n_init=10, verbose=0)
+    y_km = km.fit_predict(s)
+
+    # Plot the results
+    plt.scatter(s['age'], s['hours-per-week'], c=y_km, cmap='viridis', s=10)
+    plt.title("K-Modes Clustering")
+    plt.xlabel("Age")
+    plt.ylabel("Hours per week")
+    plt.show()
+
+
+# Problem 1a
 run_Logistic_Regression()
-# 1b
+# Problem 1b
 run_SVM()
+# Problem 2
+run_kmeans()
+# Problem 3 - running determine_k(1000) gives the elbow plot, where 10 seems to be a good k
+run_kmodes(1000)

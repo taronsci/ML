@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde9ef7d-0e4b-4a96-b31d-f0366fafaa45" name="Changes" comment="added test set to measure accuracy, trained SVM">
+    <list default="true" id="bde9ef7d-0e4b-4a96-b31d-f0366fafaa45" name="Changes" comment="added functions that perform 1a and 1b">
       <change beforePath="$PROJECT_DIR$/Bonus.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bonus.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732122971948</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added functions that perform 1a and 1b">
+      <option name="closed" value="true" />
+      <created>1732123481787</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732123481787</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +144,7 @@
     <MESSAGE value="assignment 3 Question 9" />
     <MESSAGE value="Boonus 1a" />
     <MESSAGE value="added test set to measure accuracy, trained SVM" />
-    <option name="LAST_COMMIT_MESSAGE" value="added test set to measure accuracy, trained SVM" />
+    <MESSAGE value="added functions that perform 1a and 1b" />
+    <option name="LAST_COMMIT_MESSAGE" value="added functions that perform 1a and 1b" />
   </component>
 </project>
