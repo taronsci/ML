@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde9ef7d-0e4b-4a96-b31d-f0366fafaa45" name="Changes" comment="Boonus 1a">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="bde9ef7d-0e4b-4a96-b31d-f0366fafaa45" name="Changes" comment="added test set to measure accuracy, trained SVM">
       <change beforePath="$PROJECT_DIR$/Bonus.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bonus.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731951688334</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added test set to measure accuracy, trained SVM">
+      <option name="closed" value="true" />
+      <created>1732122971948</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732122971948</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,6 +135,7 @@
     <MESSAGE value="assignment 3 Question 7" />
     <MESSAGE value="assignment 3 Question 9" />
     <MESSAGE value="Boonus 1a" />
-    <option name="LAST_COMMIT_MESSAGE" value="Boonus 1a" />
+    <MESSAGE value="added test set to measure accuracy, trained SVM" />
+    <option name="LAST_COMMIT_MESSAGE" value="added test set to measure accuracy, trained SVM" />
   </component>
 </project>

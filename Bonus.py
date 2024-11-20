@@ -20,27 +20,31 @@ y_class = (y > threshold).astype(int)
 x = x.reshape(-1, 1)
 x_train, x_test, y_train, y_test = train_test_split(x, y_class, test_size=0.1, random_state=34, shuffle=True)
 
-# 1a
-# Create the logistic regression model
-model = LogisticRegression()
-model.fit(x_train, y_train)
 
-# Make predictions
-y_probs = model.predict_proba(x_test)[:, 1]
-predictions = (y_probs >= 0.5).astype(int)
+def run_Logistic_Regression():
+    """
+    Creates a logistic regression model on the data, calculates accuracy, plots results
+    :return:
+    """
+    # Create the logistic regression model
+    model = LogisticRegression()
+    model.fit(x_train, y_train)
 
-# Calculate accuracy
-accuracy = accuracy_score(y_test, predictions)
-print(f"Accuracy: {accuracy}")
+    # Make predictions
+    y_probs = model.predict_proba(x_test)[:, 1]
+    predictions = (y_probs >= 0.5).astype(int)
 
-# plot Logistic Regression Line
-plt.scatter(x, y, c=y_class, cmap='viridis')
-plt.plot(x_test, y_probs, color='red', label='Logistic Regression Line')
-plt.legend()
-plt.show()
+    # Calculate accuracy
+    accuracy = accuracy_score(y_test, predictions)
+    print(f"Accuracy: {accuracy}")
+
+    # plot Logistic Regression Line
+    plt.scatter(x, y, c=y_class, cmap='viridis')
+    plt.plot(x_test, y_probs, color='red', label='Logistic Regression Line')
+    plt.legend()
+    plt.show()
 
 
-# 1b
 def find_parameters_for_SVM():
     """
     Function that finds parameters for SVM using GridSearchCV
@@ -70,24 +74,35 @@ def find_parameters_for_SVM():
     return best_model
 
 
-# train SVM
-params = find_parameters_for_SVM()
-svm_model = svm.SVC(C=params.C, kernel='rbf', gamma=params.gamma, decision_function_shape='ovr')
-svm_model.fit(x_train, y_train)
+def run_SVM():
+    """
+    Creates an SVM model on the data, calculates accuracy, plots results
+    :return:
+    """
+    # train SVM
+    params = find_parameters_for_SVM()
+    svm_model = svm.SVC(C=params.C, kernel='rbf', gamma=params.gamma, decision_function_shape='ovr')
+    svm_model.fit(x_train, y_train)
 
-# Create a grid to plot the decision boundary
-xx = np.linspace(x.min(), x.max(), 100).reshape(-1, 1)
+    # Create a grid to plot the decision boundary
+    xx = np.linspace(x.min(), x.max(), 100).reshape(-1, 1)
 
-# Predict on the grid
-Z = svm_model.predict(xx)
+    # Predict on the grid
+    z = svm_model.predict(xx)
 
-# Calculate accuracy
-svm_prediction = svm_model.predict(x_test)
-accuracy = accuracy_score(y_test, svm_prediction)
-print(f"Accuracy: {accuracy}")
+    # Calculate accuracy
+    svm_prediction = svm_model.predict(x_test)
+    accuracy = accuracy_score(y_test, svm_prediction)
+    print(f"Accuracy: {accuracy}")
 
-# Plot the results
-plt.scatter(x, y, c=y_class, cmap='viridis', s=10)
-plt.plot(xx, Z, color='red', lw=2)
-plt.title('SVM Max Margin Classifier')
-plt.show()
+    # Plot the results
+    plt.scatter(x, y, c=y_class, cmap='viridis', s=10)
+    plt.plot(xx, z, color='red', lw=2)
+    plt.title('SVM Max Margin Classifier')
+    plt.show()
+
+
+# 1a
+run_Logistic_Regression()
+# 1b
+run_SVM()
